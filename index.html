@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Frontend Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body class="dark-mode">
+    <div class="background-rings"></div>
+    <div class="background-rings-right"></div>
+   <div class="fixed top-6 right-6 flex items-center space-x-4 z-20">
+    <span class="material-icons toggle-icon" id="theme-icon-sun">light_mode</span>
+    <div class="toggle-switch" id="theme-toggle">
+        <div class="toggle-knob"></div>
+    </div>
+    <span class="material-icons toggle-icon" id="theme-icon-moon">dark_mode</span>
+</div>
+    <div class="container">
+        <div class="grid md:grid-cols-2 gap-16 items-center" id="welcome-screen">
+            <div class="welcome-text">
+                <h1 class="text-5xl md:text-7xl font-light mb-2">Welcome to the</h1>
+                <h1 class="text-5xl md:text-7xl font-bold mb-10">Frontend Quiz!</h1>
+                <p class="text-xl text-gray-400 italic">Pick a subject to get started.</p>
+            </div>
+            <div class="quiz-options">
+                <div class="quiz-option" data-subject="HTML">
+                    <div class="quiz-option-icon icon-html">
+                        <span class="material-icons">code</span>
+                    </div>
+                    <span class="quiz-title">HTML</span>
+                </div>
+                <div class="quiz-option" data-subject="CSS">
+                    <div class="quiz-option-icon icon-css">
+                        <span class="material-icons">palette</span>
+                    </div>
+                    <span class="quiz-title">CSS</span>
+                </div>
+                <div class="quiz-option" data-subject="Javascript">
+                    <div class="quiz-option-icon icon-js">
+                        <span class="material-icons">integration_instructions</span>
+                    </div>
+                    <span class="quiz-title">Javascript</span>
+                </div>
+                <div class="quiz-option" data-subject="Accessibility">
+                    <div class="quiz-option-icon icon-accessibility">
+                        <span class="material-icons">accessibility_new</span>
+                    </div>
+                    <span class="quiz-title">Accessibility</span>
+                </div>
+            </div>
+        </div>
+                <div class="question-container grid md:grid-cols-2 gap-16 items-start" id="question-screen">
+                <div class="question-header">
+        <button class="back-button flex items-center mb-4" id="back-button">
+            <span class="material-icons mr-2">arrow_back</span>
+            Back to Main
+        </button>
+                <p class="question-number" id="question-number-text">Question 1 of 10</p>
+                <h2 class="question-text" id="question-text-element">Which HTML tag is used to define an internal style sheet?</h2>
+            </div>
+            <div>
+                <div class="space-y-6" id="answer-options-container">
+                </div>
+                <button class="submit-button w-full mt-8" disabled="" id="submit-answer-button">Submit Answer</button>
+                <p class="error-message" id="error-message">Please select an answer</p>
+                <div class="progress-bar-bg mt-12">
+                    <div class="progress-bar" id="progress-bar-fill" style="width: 10%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="results-container grid md:grid-cols-2 gap-16 items-center" id="results-screen">
+            <div>
+                <h2 class="results-title">Quiz completed</h2>
+                <h2 class="results-title"><span>You scored...</span></h2>
+            </div>
+            <div>
+                <div class="score-card">
+                    <div class="score-card-topic" id="results-topic-info">
+                    </div>
+                    <p class="score" id="results-score">8</p>
+                    <p class="score-outof" id="results-outof">out of 10</p>
+                </div>
+                <button class="submit-button play-again-button w-full" id="play-again-button">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
